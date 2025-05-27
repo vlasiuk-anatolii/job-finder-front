@@ -13,7 +13,7 @@ If no profile is set, users can still search for jobs manually.
 
 ## 📽️ Demo
 
-[Watch demo video]()
+[Watch demo video](https://www.loom.com/share/2ba45bab9f8745d1b77d1aff80756c77?sid=513e1d3b-69dc-4d95-a140-2f7029db9456)
 
 ## 🚀 Features
 
