@@ -12,7 +12,6 @@ export const post = async (path: string, data: FormData | object) => {
 		data instanceof FormData ? Object.fromEntries(data.entries()) : data;
 	const response = await fetch(`${API_AUTH_URL}/${path}`, {
 		method: "POST",
-		credentials: "include",
 		headers: {
 			Accept: "application/json",
 			"Content-Type": "application/json",
