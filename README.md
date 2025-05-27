@@ -41,8 +41,8 @@ If no profile is set, users can still search for jobs manually.
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/vlasiuk-anatolii/blog-up-front
-cd blog-up-front
+git clone https://github.com/vlasiuk-anatolii/job-finder-front
+cd job-finder-front
 npm install
 npm run dev
 ```
@@ -54,8 +54,10 @@ The app will be available at [http://localhost:3000](http://localhost:3000)
 Create a `.env` file in the current directory with the following content:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:3001
-NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lf**************************
+NEXT_PUBLIC_API_AUTH_URL=http://localhost:3001
+NEXT_PUBLIC_API_URL=https://jsearch.p.rapidapi.com
+NEXT_PUBLIC_RAPID_API_KEY=33f43e99*************************da022674
+NEXT_PUBLIC_RAPID_API_HOST=jsearch.p.rapidapi.com
 ```
 
 ## 📁 Project Structure
@@ -64,46 +66,36 @@ NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lf**************************
 front/
 ├── app/
 │ ├── auth/ // Authentication pages and logic
-│ ├── comments/ // Comment-related pages and logic
 │ ├── common/ // Shared components/utilities
 │ ├── header/ // Header layout and navigation
-│ ├── posts/ // Post-related pages (CRUD)
-│ ├── search/ // Search functionality
+│ ├── jobs/ // Jobs pages
+│ ├── liked/ // View liked jobs
+│ ├── profile/ // Profile user
 │ ├── store/ // Redux store and slices
 │ ├── dark.theme.ts // Custom MUI dark theme
 │ └── globals.css // Global CSS styles
 ├── .next/ // Next.js build output (auto-generated)
 ├── package.json // Project metadata and dependencies
-├── tailwind.config.js // Tailwind CSS configuration
 └── tsconfig.json // TypeScript configuration
 ```
 
 ## ✅ Implemented
 
-* [x] Display all posts
-* [x] View a post with comments
-* [x] Create a new post
-* [x] Edit a post
-* [x] Delete a post
-* [x] Add comments to a post
-* [x] Add files to comments
-* [x] Resizing image of comment to 320x240
+* [x] Display all jobs
+* [x] View a job with details
+* [x] Create a user profile
+* [x] Show job recommendations based on profile
+* [x] Like/unlike job
+* [x] Store liked jobs in store
+* [x] View liked jobs on /liked page
+* [x] Search for jobs by query
 * [x] Sanitize html in comment
-* [x] Filter comments
-* [x] Add files to comments
-
-* [x] Preview comment
-* [x] Pagination comments
-* [x] Displaying comments in realtime
-* [x] Client-side validation
-* [x] Error handling
-* [x] Search of posts (basic)
 * [x] Responsive design
 
 ## 📝 Notes
 
-* The backend should be running on `http://localhost:3001` or the address set in `NEXT_PUBLIC_API_URL`.
-* All forms include basic validation with helpful error messages.
+* The backend should be running on `http://localhost:3001` or the address set in `NEXT_PUBLIC_API_AUTH_URL`.
+* Form include basic validation with helpful error messages.
 
 ## 📄 License
 
